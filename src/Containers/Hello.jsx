@@ -4,7 +4,7 @@ export class HelloMessage extends React.Component {
     render() {
         return (
             <div>
-                Hello folks!
+                This is a test website, no worries, you won't be charged :)
             </div>
         );
     }
