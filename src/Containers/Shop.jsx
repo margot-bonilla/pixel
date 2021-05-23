@@ -65,15 +65,15 @@ export default function Shop() {
     const classes = useStyles();
 
     const sendCustomEvent = (eventName) => {
-        window.fbq('trackCustom', eventName, {customParameter: "value"}, {eventID: `custom-${eventName}-${Date.now()}`});
+        window.fbq('trackCustom', eventName, {customParameter: "value"});
     }
 
     const viewProduct = (id) => {
-        window.fbq('track', 'ViewProduct', {id}, {eventID: `view-product-${id}-${Date.now()}`});
+        window.fbq('trackCustom', 'ViewProduct', {id});
     }
 
     const purchaseProduct = (id) => {
-        window.fbq('track', 'Purchase', {currency: "EUR", value: 30.00}, {eventID: `purchase-product-${id}-${Date.now()}`});
+        window.fbq('track', 'Purchase', {currency: "EUR", value: 30.00});
     }
 
     return (
